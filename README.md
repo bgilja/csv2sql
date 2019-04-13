@@ -6,8 +6,8 @@ Simple python tool to create SQL `INSERT` statements from CSV files.
 `python csv2sql.py -t <tablename> <csv file>`
 
 
-.csv column remover
+#.csv column remover
 Remove or rename columns in CSV files. Script makes new .csv file
 
-Usage
+##Usage
 python csv_col_remove.py <csv file>
