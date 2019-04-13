@@ -29,14 +29,14 @@ def main():
         reader = csv.reader(f, delimiter=args.delimiter, quoting=csv.QUOTE_ALL)
 
         # Create the header row, since we may have to repeat it
-        header_row = 'INSERT INTO ' + args.tablename + ' ('
+        header_row = 'INSERT INTO ' + '`' + args.tablename + '`' + ' ('
         first = True
         for item in next(reader):
             if first:
                 first = False
             else:
                 header_row+=', '
-            header_row+='"' + item + '"'
+            header_row+='`' + item + '`'
         header_row+=') VALUES '
 
         # Set a counter, since there can't be more than 1000 inserts at a time
