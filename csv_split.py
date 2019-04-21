@@ -40,7 +40,7 @@ def main():
         print("Select where will columns be placed. Each column can be placed in multiple tables.\n")
         [print (str(i+1) + ". " + head[i]) for i in range(len(head))]
         print()
-        for i in range(table_count-1):
+        for i in range(table_count):
             user_input = input("Type columns to separate (separated only by space): ").split(" ")
             user_input = [int(int(t)-1) for t in user_input]
             user_input = list(set(user_input))
@@ -53,7 +53,6 @@ def main():
                 s.append(user_input)
                 idxs = [t for t in idxs if t not in user_input]
 
-        s.append([t-1 for t in idxs])
         for i in range(table_count):
             print(str(i+1) + ". table contains: " + ", ".join([head[t] for t in s[i]]))
 
