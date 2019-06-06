@@ -47,9 +47,9 @@ def main():
             if counter % 1000 == 0:
                 if counter != 0:
                     sys.stdout.write(';\n')
-                print(header_row)
+                sys.stdout.write(header_row)
             else:
-                sys.stdout.write(',\n')
+                sys.stdout.write(',')
             sys.stdout.write('(')
             first = True
 
